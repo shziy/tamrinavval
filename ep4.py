@@ -156,7 +156,7 @@ class cone(threedimensionals):
 class sphere(threedimensionals):
     def __init__(self,radius):
         self.radius=radius
-        self.__having_volume='yes'
+        self.__having_volume='Yes'
         self.__shape_name='sphere'
         self.__diameter=self.radius*2
         self.n_dimensions=3
