@@ -88,13 +88,9 @@ class cube(threedimensionals):
         self.cube_shape='square'
         return('the shape is square')
         
-    def get__sides(self):
+    
         
-        return("the cube has 12 sides")
-        
-    def get_equal_sides(self):
-       
-        return('so all sides are {} '.format(self.equal_sides))
+
 #inja baraye inke  mokaab mostatil az khanevade mokaab hastaz cube ers bari karde ast      
 class rectangular_cube(cube):
     def __init__(self,length,width,height):
@@ -143,7 +139,7 @@ class cone(threedimensionals):
         
         return('cross and circle')
     
-    def  get__sides(self):
+    def  sides_kind(self):
         return('cos its based on a circle and a cross it doesnt have any unique side')
     
     def get_dimensions(self):
@@ -153,6 +149,8 @@ class cone(threedimensionals):
         self.side_area=((math.pi)*self.radius)*(self.slope_length)
         return('the side area is {} '.format(round(self.side_area,2)))
     
+    def n_diameter(self):
+        retrun('it has uncountable diameter')
 class sphere(threedimensionals):
     def __init__(self,radius):
         self.radius=radius
@@ -178,7 +176,10 @@ class sphere(threedimensionals):
          
     def sides(self):
          return('it doesnt have any sepecial sides')
- #dr kol klas haye sebodi az class threedimensionals ers bari mikonnd       
+        
+    def diameter(self):
+        return(self.radius*2)
+        #dr kol klas haye sebodi az class threedimensionals ers bari mikonnd       
 
 class cylindre(threedimensionals):
     def __init__(self,height,radius):
@@ -207,6 +208,14 @@ class cylindre(threedimensionals):
           
     def sides(self):
         return('due to the fact that its a 3d shape we can not count any side for it')
+    
+    def cross_section_typr(self):
+        return('circle')
+    
+    def get__equality(self):
+        return('it can not have equal sides')
+    
+    
   
 class pyramid(threedimensionals):
     def __init__(self,height,length,width,side):
@@ -236,6 +245,9 @@ class pyramid(threedimensionals):
     
     def sides(self):
         return('due to the fact that its a 3d shape we can not count any side for it')
+    
+    def shape_kind_number(self):
+        return('3 squares and one triangles')
  
 class two_dimensionals(shapes) :
     def __init__(self,name):
@@ -323,8 +335,6 @@ class rectangle(two_dimensionals):
     def angles(self):
         return('it has 4 angles')
     
-    def get_total_area(self):
-        super().total_area()
     
     def get_volume(self):
         super().volume()
@@ -343,6 +353,9 @@ class rectangle(two_dimensionals):
     
     def get_dimensions(self):
         super().dimensions()
+               
+    def get_angles(self):
+        return('8 90 degree angles')
         
 class triangle(two_dimensionals):
     def __init__(self,ab,bc,ac,sin_degree):
@@ -394,8 +407,6 @@ class circle(two_dimensionals):
     def angles(self):
         return('it doesnt have angles')
     
-    def get_total_area(self):
-        super().total_area()
     
     def get_volume(self):
         super().volume()
@@ -413,7 +424,9 @@ class circle(two_dimensionals):
     
     def get_dimensions(self):
         super().dimensions()
-        
+    
+    def diameter_length(self):
+        return(self.radius*2)
 
     
 class diamond(two_dimensionals):
@@ -489,6 +502,9 @@ class Regular_polygon(two_dimensionals):
     
     def get_dimensions(self):
         super().dimensions()
+               
+    def largest_length(self):
+        return('all sides have equal length')
                
         
         
